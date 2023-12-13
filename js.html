@@ -1,0 +1,111 @@
+<html>
+    <head><title>Temel JS</title></head>
+    <body>
+
+        <form>
+            <div>
+                <input id="kAdi" name="kullaniciadi" />
+                <span id="kAdiHata"></span>
+            </div>
+            <div>
+                <input id="pass" name="sifre" />
+                <span id="passHata"></span>
+            </div>
+            <div>
+                <a onclick="dogrula()">Giriş Yap</a>
+            </div>
+        </form>
+
+        <script>
+
+            function dogrula(){
+                var kAdi = document.getElementById("kAdi").value
+                var password = document.getElementById("pass").value
+
+                document.getElementById("kAdiHata").innerText=""
+                document.getElementById("passHata").innerText=""
+                    
+
+                if(kAdi=="" && password==""){
+                    document.getElementById("kAdiHata").innerText="Kullanıcı adı boş bırakılamaz"
+                    document.getElementById("passHata").innerText="Şifre boş bırakılamaz"
+                    
+                }
+                else if(kAdi==""){
+                    document.getElementById("kAdiHata").innerText="<b style='color:red'>Kullanıcı Adı </b> boş bırakılamaz"
+                    // alert("Kullanıcı Adı Boş Bırakılamaz")
+                }
+                else if(password==""){
+                    document.getElementById("passHata").innerHTML="<b style='color:red'>Şifre</b> boş bırakılamaz"
+                    // alert("Şifre Boş Bırakılamaz")
+                }
+
+            }
+
+            //DEĞİŞKEN
+            var degisken;
+            degisken="Merhaba"
+            degisken=5
+            degisken=new Date()
+            degisken=true
+            // alert(degisken)
+
+            //FONKSIYON
+           function fonksiyon()
+           {
+            alert("Fonksiyon çağrıldı")
+           } 
+        //    fonksiyon()
+
+           function fonksiyon1(deger){
+            alert(deger)
+           }
+        //    fonksiyon1("Alper")
+
+           function fonksiyon2(deger=""){
+            alert(deger)
+           }
+        //    fonksiyon2(55)
+
+
+        //KOŞULLAR
+        function kosul(deger){
+            // if(deger){
+            //     alert(deger)
+            // }
+
+            // if(deger==1){
+            //     alert("Sayı 1'dir")
+            // }
+            // else{
+            //     alert("Koşul Sağlanamadı")
+            // }
+
+            console.log(deger)
+            if(Number(deger)){
+                if(deger==1){
+                alert("Sayı 1'dir")
+                }
+                else if(deger==2){
+                    alert("Sayı 2'dir")
+                }
+                else if(deger<0){
+                    alert("negatif sayı")
+                }
+                else if(deger>=0){
+                    alert("Sayı 0 veya pozitif")
+                }
+                else{
+                    alert("Geçersiz Parametre")
+                }
+            }
+            else{
+                alert("Sayı değil")
+            }
+
+                    }
+        // kosul("5")
+
+        </script>
+    </body>
+</html>
